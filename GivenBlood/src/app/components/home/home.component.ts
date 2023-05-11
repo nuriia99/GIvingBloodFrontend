@@ -7,6 +7,13 @@ import { Component } from '@angular/core';
 })
 export class HomeComponent {
   title = 'GivenBlood';
+  lenguageButton = 'es';
+
+  changeLenguage(leng: string) {
+      this.lenguageButton = leng;
+  }
+
+ 
   
   // http = inject(HttpClient);
 

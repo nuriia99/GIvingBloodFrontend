@@ -28,3 +28,18 @@
   filter: brightness(80%);
 }
 
+
+.buttonLenguagePressed{
+  background-color: white;
+  padding: 6.75px 13.5px;
+  border-radius: 7px;
+  color: black;
+  font-weight: 400;
+}
+
+.untarget{
+  -webkit-user-select: none; /* Safari */ /* IE 10 and IE 11 */
+  -moz-user-select: none;
+  user-select: none;
+}
+
