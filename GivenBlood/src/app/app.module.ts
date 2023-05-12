@@ -7,13 +7,15 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
 import { CanGiveComponent } from './components/can-give/can-give.component';
 import { WantGiveComponent } from './components/want-give/want-give.component';
+import { CilindreComponent } from './components/cilindre/cilindre.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     CanGiveComponent,
-    WantGiveComponent
+    WantGiveComponent,
+    CilindreComponent
   ],
   imports: [
     BrowserModule,

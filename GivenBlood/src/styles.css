@@ -5,14 +5,21 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,500;0,600;0,700;1,500;1,600;1,700&display=swap');
 
+:root{
+  --red-color: #bc2b30;
+  --height-cilindre: 100px;
+}
+
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: 'Open Sans', sans-serif;
 
-  --red-color: #bc2b30;
+  
 }
+
+
 ::selection {
   background-color: #e8989b;
 }
@@ -76,4 +83,43 @@
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+.cilindre{
+  position: relative;
+  min-width: 150px;
+  border-radius: 75px/25px;
+  height: 225px;
+  background-color: rgba(160,160,160,.5);
+}
+
+.cilindre::before{
+  content: "";
+  position: absolute;
+  width: 150px;
+  height: 50px;
+  border-radius: 75px/25px;
+  background-color: rgba(160,160,160,.2);
+}
+
+.cilindre2{
+  position: absolute;
+  bottom: 0;
+  width: 150px;
+  border-radius: 75px/25px;
+  height: var(--height-cilindre);
+  min-height: 50px;
+  background-color: #bc2b30;
+}
+
+.cilindre2::before{
+  content: "";
+  position: absolute;
+  width: 150px;
+  height: 50px;
+  border-radius: 75px/25px;
+  background-color: rgba(158,43,48,.7);
+}
+
+
+
 
