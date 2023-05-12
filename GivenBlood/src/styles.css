@@ -43,3 +43,22 @@
   user-select: none;
 }
 
+
+.homeLinks::before{
+  content: "";
+  display: block;
+  top: auto;
+  left: auto;
+  position: relative;
+  background-image: url('./assets/spritesheet.png');
+  background-position: -155px -289px;
+  width: 160px;
+  height: 160px;
+  margin-bottom: 15px;
+  transition: all 0.5s;
+}
+
+.homeLinks2::before{
+  background-position: -319px -160px;
+}
+

@@ -4,7 +4,7 @@
     <source src="https://www.donarsang.gencat.cat/media/upload/videos/loop_video_portada.mp4" type="video/mp4">
   </video>
 
-  <div class="w-full h-[100vh] relative px-[5%] flex items-center justify-center text-white">
+  <div class="w-full relative px-[5%] flex items-center justify-center text-white">
     <nav class="w-full absolute top-0 left-0 py-5 px-[8%] flex items-center justify-between">
       <img class="w-10" src="../../../assets/logo-bancsang-negatiu.png" srcset="/media/img/logo-bancsang-negatiu@2x.png 2x, /media/img/logo-bancsang-negatiu@3x.png 3x" alt="Banc de Sang i Teixits" class="logo">
       <ul class="list-none flex items-center gap-1">
@@ -13,10 +13,18 @@
         <li (click)='changeLenguage("en")' [class]="lenguageButton === 'en' ? 'buttonLenguagePressed px-[13px] py-[6.75px] cursor-pointer hover:underline untarget' : ' px-[13px] py-[6.75px] cursor-pointer hover:underline untarget'">EN</li>
       </ul>
     </nav>
-    <div class="text-center">
+    <div class="text-center mt-[120px]">
       <h1 class="text-[3.125rem] font-light">Estos días, si quieres donar sangre <span class="font-bold">apúntate</span></h1>
       <button class=" p-3 px-10 mt-3 bg-white text-red-color text-lg hover:bg-red-color hover:text-white rounded-md transition">¡Apúntate aquí!</button>
     </div>
+  </div>
+  <div class="w-[50%] mt-28 m-auto flex gap-10 justify-around">
+    <a href="/can-give" class="homeLinks w-[160px] block text-center text-white font-semibold hover:before:scale-105">
+      ¿PUEDO DONAR?
+    </a>
+    <a href="/want-give" class="homeLinks homeLinks2 w-[160px] block text-center text-white font-semibold hover:before:scale-105">
+      ¿DONAR SANGRE?
+    </a>
   </div>
 
 </header>
