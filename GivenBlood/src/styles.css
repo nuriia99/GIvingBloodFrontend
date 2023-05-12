@@ -62,3 +62,18 @@
   background-position: -319px -160px;
 }
 
+.underlineNumber::after{
+  content: "";
+  background-image: url('./assets/underline.svg');
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: .75rem;
+  -ms-transform: rotate(-3deg);
+  transform: rotate(-3deg);
+  z-index: 2;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+

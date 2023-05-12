@@ -24,7 +24,3 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
-
-// home
-// Can-give
-// want-give
