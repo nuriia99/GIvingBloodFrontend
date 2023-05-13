@@ -6,19 +6,22 @@ import { Component } from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent {
+
+
   title = 'GivenBlood';
   lenguageButton = 'es';
   peopleDay1 = 700;
   peopleDay2 = 200;
   peopleDay3 = 400;
+  warning = true;
 
   changeLenguage(leng: string) {
       this.lenguageButton = leng;
   }
 
 
- 
-  
+
+
   // http = inject(HttpClient);
 
   // changeTitle() {

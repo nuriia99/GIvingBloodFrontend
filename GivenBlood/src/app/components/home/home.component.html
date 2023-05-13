@@ -1,9 +1,19 @@
-
-<header id="header">
+<div *ngIf="warning" class="bg-[#fff3cd] border border-[#ffeeba] text-[#856404] px-4 py-3 rounded relative" role="alert">
+  <div class="flex">
+    <div>
+      <strong>¡Atención!</strong> Esta página web ha sido creada para aprender y los datos que vas a encontrar pueden no ser reales. Si estás interesado en donar sangre, accede a la siguiente página web:
+      <a href="https://donarsang.gencat.cat/es/" class="text-red-color">https://donarsang.gencat.cat/es/</a>
+    </div>
+    <span (click)="warning=false" class="px-4 py-3">
+      <svg class="fill-current h-6 w-6 text-[#856404]" role="button" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><title>Close</title><path d="M14.348 14.849a1.2 1.2 0 0 1-1.697 0L10 11.819l-2.651 3.029a1.2 1.2 0 1 1-1.697-1.697l2.758-3.15-2.759-3.152a1.2 1.2 0 1 1 1.697-1.697L10 8.183l2.651-3.031a1.2 1.2 0 1 1 1.697 1.697l-2.758 3.152 2.758 3.15a1.2 1.2 0 0 1 0 1.698z"/></svg>
+    </span>
+  </div>
+</div>
+<header id="header" class="pb-20">
   <video class="back-video" autoplay paysInline loop muted>
     <source src="https://www.donarsang.gencat.cat/media/upload/videos/loop_video_portada.mp4" type="video/mp4">
   </video>
-
+  
   <div class="w-full relative px-[5%] flex items-center justify-center text-white">
     <nav class="w-full absolute top-0 left-0 py-5 px-[8%] flex items-center justify-between">
       <img class="w-10" src="../../../assets/logo-bancsang-negatiu.png" srcset="/media/img/logo-bancsang-negatiu@2x.png 2x, /media/img/logo-bancsang-negatiu@3x.png 3x" alt="Banc de Sang i Teixits" class="logo">
@@ -13,9 +23,9 @@
         <li (click)='changeLenguage("en")' [class]="lenguageButton === 'en' ? 'buttonLenguagePressed px-[13px] py-[6.75px] cursor-pointer hover:underline untarget' : ' px-[13px] py-[6.75px] cursor-pointer hover:underline untarget'">EN</li>
       </ul>
     </nav>
-    <div class="text-center mt-[120px]">
+    <div class="text-center mt-[180px]">
       <h1 class="text-[3.125rem] font-light">Estos días, si quieres donar sangre <span class="font-bold">apúntate</span></h1>
-      <a href="/want-give"><button class=" p-3 px-10 mt-3 bg-white text-red-color text-lg hover:bg-red-color hover:text-white rounded-md transition">¡Apúntate aquí!</button></a>
+      <a href="/want-give"><button class=" p-3 px-10 mt-3 bg-white text-red-color text-lg hover:bg-red-800 hover:text-white rounded-md transition">¡Apúntate aquí!</button></a>
     </div>
   </div>
   <div class="w-[50%] my-20 m-auto flex gap-10 justify-around">
@@ -26,7 +36,7 @@
       ¿DONAR SANGRE?
     </a>
   </div>
-
+  
 </header>
 
 <section id="needGivins" class="bg-white py-[40px]">
@@ -40,4 +50,29 @@
     <span class="text-[0.7em] text-[#555]">*Número de donaciones previstas</span>
     <button class="bg-red-color text-white text-[.7em] py-[10px] px-[38px] mt-8 rounded-md border-[4px] border-red-color hover:bg-white hover:text-red-color transition duration-300">DONAR SANGRE</button>
   </div>
+</section>
+
+<section id="socialMedia" class="bg-[#f4f4f4] py-14">
+  <div class="socialMediaLinks flex items-center justify-center gap-4">
+    <a href="https://twitter.com/donarsang" class="twitterIcon" target="_blank"></a>
+    <a href="https://www.facebook.com/donarsang" class="facebookIcon" target="_blank"></a>
+    <a href="https://www.youtube.com/user/bancsang" class="youtubeIcon" target="_blank"></a>
+    <a href="https://www.instagram.com/donarsang/g" class="instagramIcon" target="_blank"></a>
+  </div>
+  <div class="p-3 text-center">
+    ¿Tienes alguna duda? Nos gustará escucharte.
+  </div>
+  <div class="text-center font-bold text-2xl">
+    93 557 35 66
+  </div>
+  <div class="text-center py-2">
+    <a href="mailto:atencioaldonant@bst.cat" class="text-red-color">atencioaldonant@bst.cat</a>
+    - 
+    <a href="https://twitter.com/donarsang" class="text-red-color" target="_blank">@donarsang</a>
+  </div>
+  <div class="text-center pt-16 flex justify-center gap-7 ">
+    <a href="https://www.bancsang.net/"  class="bancSalutIcon"></a>
+    <a href="https://salutweb.gencat.cat/ca/inici" class="salutIcon" target="_blank"></a>
+  </div>
+
 </section>

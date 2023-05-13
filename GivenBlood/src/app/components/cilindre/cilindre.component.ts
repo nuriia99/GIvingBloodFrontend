@@ -7,8 +7,11 @@ import { Component, Input } from '@angular/core';
 })
 export class CilindreComponent {
   @Input() peopleDay!:number;
-  heightCilindre:string = '300px';
+  heightCilindre:string = '0px';
   ngOnInit(){
-    this.heightCilindre = Math.floor(225/1100 * this.peopleDay) + 'px';
+    setInterval(() => {
+      this.heightCilindre = Math.floor(225/1100 * this.peopleDay) + 'px';
+    },500)
+    
   }
 }
