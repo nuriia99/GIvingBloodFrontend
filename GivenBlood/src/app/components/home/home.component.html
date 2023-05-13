@@ -43,12 +43,12 @@
   <h1 class="text-center text-[1.728rem] ">NECESITAMOS <span class="text-red-color text-[4rem] underlineNumber relative">1100</span> DONACIONES POR DÍA</h1>
   <div class="flex flex-col items-center">
     <div class="w-[50%] mt-20 mb-5 mx-auto flex gap-10 justify-around">
-      <app-cilindre [peopleDay]=peopleDay1></app-cilindre>
-      <app-cilindre [peopleDay]=peopleDay2></app-cilindre>
-      <app-cilindre [peopleDay]=peopleDay3></app-cilindre>
+      <app-cilindre [peopleDay]=peopleDay1 day="HOY"></app-cilindre>
+      <app-cilindre [peopleDay]=peopleDay2 day="MAÑANA"></app-cilindre>
+      <app-cilindre [peopleDay]=peopleDay3 day="PASADO MAÑANA"></app-cilindre>
     </div>
     <span class="text-[0.7em] text-[#555]">*Número de donaciones previstas</span>
-    <button class="bg-red-color text-white text-[.7em] py-[10px] px-[38px] mt-8 rounded-md border-[4px] border-red-color hover:bg-white hover:text-red-color transition duration-300">DONAR SANGRE</button>
+    <a href="/want-give"><button class="bg-red-color text-white text-[.7em] py-[10px] px-[38px] mt-8 rounded-md border-[4px] border-red-color hover:bg-white hover:text-red-color transition duration-300">DONAR SANGRE</button></a>
   </div>
 </section>
 

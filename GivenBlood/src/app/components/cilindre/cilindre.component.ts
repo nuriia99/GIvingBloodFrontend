@@ -7,6 +7,7 @@ import { Component, Input } from '@angular/core';
 })
 export class CilindreComponent {
   @Input() peopleDay!:number;
+  @Input() day: string = 'HOY';
   heightCilindre:string = '0px';
   ngOnInit(){
     setInterval(() => {
