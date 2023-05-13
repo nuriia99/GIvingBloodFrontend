@@ -9,15 +9,11 @@ export class HomeComponent {
 
 
   title = 'GivenBlood';
-  lenguageButton = 'es';
   peopleDay1 = 700;
   peopleDay2 = 200;
   peopleDay3 = 400;
   warning = true;
 
-  changeLenguage(leng: string) {
-      this.lenguageButton = leng;
-  }
 
 
 

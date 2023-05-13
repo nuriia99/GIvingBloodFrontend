@@ -169,6 +169,18 @@
   display: block;
 }
 
+.balanzaIcon{
+  background-image: url('./assets/spritesheet.png');
+  background-position: -780px -168px;
+  width: 95px;
+  height: 95px;
+  display: block;
+}
+
+.testBackground{
+  background-color: rgb(188,43,48, 0.8);
+}
+
 
 
 

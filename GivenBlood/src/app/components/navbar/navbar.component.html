@@ -1,0 +1,10 @@
+<nav class="w-full absolute top-0 left-0 py-5 px-[8%] flex items-center justify-between">
+  <a href="">
+    <img class="w-10" src="../../../assets/logo-bancsang-negatiu.png" srcset="/media/img/logo-bancsang-negatiu@2x.png 2x, /media/img/logo-bancsang-negatiu@3x.png 3x" alt="Banc de Sang i Teixits" class="logo">
+  </a>
+  <ul class="list-none flex items-center gap-1">
+    <li (click)='changeLenguage("ca")' [class]="lenguageButton === 'ca' ? 'buttonLenguagePressed px-[13px] py-[6.75px] cursor-pointer hover:underline untarget' : ' px-[13px] py-[6.75px] cursor-pointer hover:underline untarget'">CAT</li>
+    <li (click)='changeLenguage("es")' [class]="lenguageButton === 'es' ? 'buttonLenguagePressed px-[13px] py-[6.75px] cursor-pointer hover:underline untarget' : ' px-[13px] py-[6.75px] cursor-pointer hover:underline untarget'">ESP</li>
+    <li (click)='changeLenguage("en")' [class]="lenguageButton === 'en' ? 'buttonLenguagePressed px-[13px] py-[6.75px] cursor-pointer hover:underline untarget' : ' px-[13px] py-[6.75px] cursor-pointer hover:underline untarget'">EN</li>
+  </ul>
+</nav>

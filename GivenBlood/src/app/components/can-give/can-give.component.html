@@ -1,1 +1,81 @@
-<p>can-give works!</p>
+<header id="header" class="">
+  <img class="back-video" src="./assets/puc-donar-large.jpg" alt="imagen-puedo-donar">
+  
+  <div class="w-full relative h-[100vh] flex flex-col items-center justify-between text-white">
+    <app-navbar></app-navbar>
+    <div class="text-center ">
+      <h1 class="text-[3.58318rem] font-extrabold">¿PUEDO DONAR?</h1>
+    </div>
+    <div class="h-[calc(100vh/2)] box-content w-full testBackground ">
+      <div *ngIf="formPage === 0"  class="h-full flex flex-col justify-center items-center">
+        <h1 class="text-[1.728rem] font-normal px-10 text-center  pb-6">TEST RÁPIDO</h1>
+        <div class="">Descubre con este sencillo test si puedes ser donante.</div>
+        <div class="balanzaIcon m-5"></div>
+        <button (click)="formPage = formPage + 1" class="border-[3px] border-white hover:bg-white hover:text-red-color transition p-2 px-4 rounded-md">EMPEZAR</button>
+      </div>
+      <div *ngIf="formPage === 1"  class="h-full flex flex-col justify-center items-center">
+        <h1 class="text-[1.728rem] font-normal px-10 text-center ">¿Has donado alguna vez?</h1>
+        <img src="./assets/ico-test-1.svg" alt="aPersonAndABloodDrop" class="py-10">
+        <div class="flex gap-5">
+          <button (click)="formPage = formPage + 1" class="border-[3px] border-white bg-white text-black hover:bg-red-color hover:text-white transition p-2 px-4 w-[130px] rounded-md">SI</button>
+          <button (click)="formPage = formPage + 1" class="border-[3px] border-white bg-white text-black hover:bg-red-color hover:text-white transition p-2 px-4 w-[130px] rounded-md">NO</button>
+        </div>
+      </div>
+      <div *ngIf="formPage === 2"  class="h-full flex flex-col justify-center items-center">
+        <h1 class="text-[1.728rem] font-normal px-10 text-center ">¿Hace menos de 2 meses que donaste por última vez?</h1>
+        <img src="./assets/ico-test-2.svg" alt="aPersonAndABloodDrop" class="py-10">
+        <div class="flex gap-5">
+          <button (click)="cantGive === false" class="border-[3px] border-white bg-white text-black hover:bg-red-color hover:text-white transition p-2 px-4 w-[130px] rounded-md">SI</button>
+          <button (click)="formPage = formPage + 1" class="border-[3px] border-white bg-white text-black hover:bg-red-color hover:text-white transition p-2 px-4 w-[130px] rounded-md">NO</button>
+        </div>
+      </div>
+      <div *ngIf="formPage === 3"  class="h-full flex flex-col justify-center items-center">
+        <h1 class="text-[1.728rem] font-normal px-10 text-center ">¿Estás bien de salud?</h1>
+        <img src="./assets/ico-test-3.svg" alt="aPersonAndABloodDrop" class="py-10">
+        <div class="flex gap-5">
+          <button (click)="formPage = formPage + 1" class="border-[3px] border-white bg-white text-black hover:bg-red-color hover:text-white transition p-2 px-4 w-[130px] rounded-md">SI</button>
+          <button (click)="cantGive === false" class="border-[3px] border-white bg-white text-black hover:bg-red-color hover:text-white transition p-2 px-4 w-[130px] rounded-md">NO</button>
+        </div>
+      </div>
+      <div *ngIf="formPage === 4"  class="h-full flex flex-col justify-center items-center">
+        <h1 class="text-[1.728rem] font-normal px-10 text-center ">¿Tienes más de 18 años?</h1>
+        <img src="./assets/ico-test-4.svg" alt="aPersonAndABloodDrop" class="py-10">
+        <div class="flex gap-5">
+          <button (click)="formPage = formPage + 1" class="border-[3px] border-white bg-white text-black hover:bg-red-color hover:text-white transition p-2 px-4 w-[130px] rounded-md">SI</button>
+          <button (click)="cantGive === false" class="border-[3px] border-white bg-white text-black hover:bg-red-color hover:text-white transition p-2 px-4 w-[130px] rounded-md">NO</button>
+        </div>
+      </div>
+      <div *ngIf="formPage === 5"  class="h-full flex flex-col justify-center items-center">
+        <h1 class="text-[1.728rem] font-normal px-10 text-center ">¿Pesas más de 50 kg.?</h1>
+        <div class="my-10 balanzaIcon"></div>
+        <div class="flex gap-5">
+          <button (click)="formPage = formPage + 1" class="border-[3px] border-white bg-white text-black hover:bg-red-color hover:text-white transition p-2 px-4 w-[130px] rounded-md">SI</button>
+          <button (click)="cantGive === false" class="border-[3px] border-white bg-white text-black hover:bg-red-color hover:text-white transition p-2 px-4 w-[130px] rounded-md">NO</button>
+        </div>
+      </div>
+      <div *ngIf="formPage === 6"  class="h-full flex flex-col justify-center items-center">
+        <h1 class="text-[1.728rem] font-normal px-10 text-center ">¿Estás embarazada?</h1>
+        <img src="./assets/ico-test-6.svg" alt="aPersonAndABloodDrop" class="py-10">
+        <div class="flex gap-5">
+          <button (click)="cantGive === false" class="border-[3px] border-white bg-white text-black hover:bg-red-color hover:text-white transition p-2 px-4 w-[130px] rounded-md">SI</button>
+          <button (click)="formPage = formPage + 1" class="border-[3px] border-white bg-white text-black hover:bg-red-color hover:text-white transition p-2 px-4 w-[130px] rounded-md">NO</button>
+        </div>
+      </div>
+      <div *ngIf="formPage === 7"  class="h-full flex flex-col justify-center items-center">
+        <h1 class="text-[1.728rem] font-normal px-10 text-center ">¿Tienes que realizar alguna actividad laboral o lúdica peligrosa?</h1>
+        <img src="./assets/ico-test-7.svg" alt="aPersonAndABloodDrop" class="py-10">
+        <div class="flex gap-5">
+          <button (click)="cantGive === false" class="border-[3px] border-white bg-white text-black hover:bg-red-color hover:text-white transition p-2 px-4 w-[130px] rounded-md">SI</button>
+          <button (click)="formPage = formPage + 1" class="border-[3px] border-white bg-white text-black hover:bg-red-color hover:text-white transition p-2 px-4 w-[130px] rounded-md">NO</button>
+        </div>
+      </div>
+      <div *ngIf="formPage === 8"  class="h-full flex flex-col justify-center items-center">
+        <h1 class="text-[1.728rem] font-normal px-10 text-center ">Felicidades, hoy puedes donar sangre</h1>
+        <img src="./assets/ico-test-pots-donar.svg" alt="aPersonAndABloodDrop" class="py-10">
+        <a href="/want-give"><button (click)="formPage = formPage + 1" class="border-[3px] border-white hover:bg-white hover:text-red-color transition p-2 px-4 rounded-md">¿DÓNDE PUEDO DONAR?</button></a>
+      </div>
+    </div>
+  </div>
+  
+  
+</header>

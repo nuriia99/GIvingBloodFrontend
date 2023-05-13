@@ -15,14 +15,7 @@
   </video>
   
   <div class="w-full relative px-[5%] flex items-center justify-center text-white">
-    <nav class="w-full absolute top-0 left-0 py-5 px-[8%] flex items-center justify-between">
-      <img class="w-10" src="../../../assets/logo-bancsang-negatiu.png" srcset="/media/img/logo-bancsang-negatiu@2x.png 2x, /media/img/logo-bancsang-negatiu@3x.png 3x" alt="Banc de Sang i Teixits" class="logo">
-      <ul class="list-none flex items-center gap-1">
-        <li (click)='changeLenguage("ca")' [class]="lenguageButton === 'ca' ? 'buttonLenguagePressed px-[13px] py-[6.75px] cursor-pointer hover:underline untarget' : ' px-[13px] py-[6.75px] cursor-pointer hover:underline untarget'">CAT</li>
-        <li (click)='changeLenguage("es")' [class]="lenguageButton === 'es' ? 'buttonLenguagePressed px-[13px] py-[6.75px] cursor-pointer hover:underline untarget' : ' px-[13px] py-[6.75px] cursor-pointer hover:underline untarget'">ESP</li>
-        <li (click)='changeLenguage("en")' [class]="lenguageButton === 'en' ? 'buttonLenguagePressed px-[13px] py-[6.75px] cursor-pointer hover:underline untarget' : ' px-[13px] py-[6.75px] cursor-pointer hover:underline untarget'">EN</li>
-      </ul>
-    </nav>
+    <app-navbar></app-navbar>
     <div class="text-center mt-[180px]">
       <h1 class="text-[3.125rem] font-light">Estos días, si quieres donar sangre <span class="font-bold">apúntate</span></h1>
       <a href="/want-give"><button class=" p-3 px-10 mt-3 bg-white text-red-color text-lg hover:bg-red-800 hover:text-white rounded-md transition">¡Apúntate aquí!</button></a>

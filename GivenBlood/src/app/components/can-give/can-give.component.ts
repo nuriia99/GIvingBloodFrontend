@@ -7,4 +7,7 @@ import { Component } from '@angular/core';
 })
 export class CanGiveComponent {
 
+  formPage:number = 0;
+  cantGive:boolean = true;
+
 }

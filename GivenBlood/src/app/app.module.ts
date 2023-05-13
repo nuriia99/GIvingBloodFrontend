@@ -8,6 +8,7 @@ import { HomeComponent } from './components/home/home.component';
 import { CanGiveComponent } from './components/can-give/can-give.component';
 import { WantGiveComponent } from './components/want-give/want-give.component';
 import { CilindreComponent } from './components/cilindre/cilindre.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { CilindreComponent } from './components/cilindre/cilindre.component';
     HomeComponent,
     CanGiveComponent,
     WantGiveComponent,
-    CilindreComponent
+    CilindreComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
