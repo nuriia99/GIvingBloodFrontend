@@ -1,10 +1,22 @@
 <header id="header" class="">
   <img class="back-video" src="./assets/puc-donar-large.jpg" alt="imagen-puedo-donar">
   
-  <div class="w-full relative h-[100vh] flex flex-col items-center justify-between text-white">
-    <app-navbar></app-navbar>
-    <div class="text-center ">
+  <app-navbar></app-navbar>
+  <div class="w-full relative h-[100vh] flex flex-col items-center justify-center text-white">
+    <div class="text-center">
       <h1 class="text-[3.58318rem] font-extrabold">QUIERO DONAR</h1>
+      <h1 class="text-[1.728rem]">¿Dónde puedo donar?</h1>
+      <div class="relative w-[500px]">
+        <div class="mt-6 p-2 w-full bg-white leading-[1.6] rounded-sm text-[1rem] flex justify-between">
+          <input type="text" class="w-full px-[.75rem] py-[.375rem] text-black outline-0" placeholder="Escribe tu población" name="searchValue" [(ngModel)]="searchValue" (ngModelChange)="updateSearchValue()" autocomplete="off" >
+          <img src="../../../assets/lupa-cercador.svg" alt="lupaCercador">
+        </div>
+        <div class="absolute top-[65px] w-full bg-white rounded-sm" [ngClass]="open ? 'visible' : 'hidden'">
+          <ul class="mx-2 my-5 max-h-[200px] text-black text-left overflow-y-scroll">
+            <li *ngFor="let center of centers" class="py-2 px-4 cursor-pointer text-black hover:bg-[#e9f3ff] rounded-md">{{center.address}}</li>
+          </ul>
+        </div>
+      </div>
     </div>
 
   </div>
