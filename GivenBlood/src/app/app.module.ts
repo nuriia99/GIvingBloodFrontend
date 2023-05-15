@@ -9,6 +9,8 @@ import { CanGiveComponent } from './components/can-give/can-give.component';
 import { WantGiveComponent } from './components/want-give/want-give.component';
 import { CilindreComponent } from './components/cilindre/cilindre.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { RedButtonComponent } from './components/red-button/red-button.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +19,9 @@ import { NavbarComponent } from './components/navbar/navbar.component';
     CanGiveComponent,
     WantGiveComponent,
     CilindreComponent,
-    NavbarComponent
+    NavbarComponent,
+    RedButtonComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

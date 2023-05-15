@@ -181,6 +181,74 @@
   background-color: rgb(188,43,48, 0.8);
 }
 
+.balanzaBlackIcon::after{
+  content: "";
+  background-image: url('./assets/spritesheet.png');
+  background-position: -694px -653px;
+  width: 29px;
+  height: 29px;
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  margin-top: -14.5px;
+  margin-left: 10px;
+}
+
+.higadoIcon::after{
+  content: "";
+  background-image: url('./assets/spritesheet.png');
+  background-position: -840px -622px;
+  width: 29px;
+  height: 23px;
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  margin-top: -11.5px;
+  margin-left: 10px;
+}
+
+.cubiertosIcon::after{
+  content: "";
+  background-image: url('./assets/spritesheet.png');
+  background-position: -460px -421px;
+  width: 15px;
+  height: 28px;
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  margin-top: -14px;
+  margin-left: 17px;
+}
+
+.moleculaIcon::after{
+  content: "";
+  background-image: url('./assets/spritesheet.png');
+  background-position: -780px -684px;
+  width: 49px;
+  height: 34px;
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  margin-top: -17px;
+}
+
+.pastillasIcon::after{
+  content: "";
+  background-image: url('./assets/spritesheet.png');
+  background-position: -155px -449px;
+  width: 35px;
+  height: 19px;
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  margin-top: -9.5px;
+  margin-left: 7px;
+}
 
 
 
