@@ -1,8 +1,12 @@
-import { Component, EventEmitter } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 
-interface Hospital {
+interface Center {
   id:number,
-  address:string
+  Name:string,
+  City: string,
+  Street: string, 
+  MaxNumberAppointments: number
 }
 
 @Component({
@@ -14,21 +18,34 @@ interface Hospital {
 export class WantGiveComponent {
   open:Boolean = false;
   searchValue:any;
-  centers: Hospital[] = [
-    { id: 12, address: 'Dr. Nice' },
-    { id: 13, address: 'Bombasto' },
-    { id: 14, address: 'Celeritas' },
-    { id: 15, address: 'Magneta' },
-    { id: 16, address: 'RubberMan' },
-    { id: 17, address: 'Dynama' },
-    { id: 18, address: 'Dr. IQ' },
-    { id: 19, address: 'Magma' },
-    { id: 20, address: 'Tornado' }
-  ];
+  centers: Center[] = [];
 
+
+  http = inject(HttpClient);
+
+
+  filterCities(centers: Center[]): Center[] {
+    const uniqueCities = new Set();
+    let filteredCenters: Center[] = centers.filter((center: Center) => {
+      if (uniqueCities.has(center.City)) return false;
+      if (center.City.toLowerCase().includes(this.searchValue.toLowerCase())) {
+        uniqueCities.add(center.City);
+        return true;
+      }
+      return false
+    });
+    return filteredCenters;
+  }
 
   updateSearchValue() {
-    if(this.searchValue.length > 0) this.open = true;
+    if(this.searchValue.length > 0) {
+      this.http.get<Center>('http://127.0.0.1:8000/api/centers')
+      .subscribe((data: any) => {
+              this.centers = this.filterCities(data);
+            });
+      this.open = true;
+    }
     else this.open = false;
+    
   }
 }
